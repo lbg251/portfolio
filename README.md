@@ -48,7 +48,7 @@ As a doctoral graduate with a background in high energy physics and extensive ex
 
 ### Exploratory Study of the role of LayerNorm in transformer models 
 
-[Code](LNmechInterp.ipynb)
+[Code](LN_Solu.ipynb)
 
 
 
