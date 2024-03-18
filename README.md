@@ -25,59 +25,53 @@ As a doctoral graduate with a background in high energy physics and extensive ex
 
 ## Projects
 ### An OV-Coherent Toy Model for Attention Head Superposition
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+[Publication](https://www.alignmentforum.org/posts/cqRGZisKbpSjgaJbc/an-ov-coherent-toy-model-of-attention-head-superposition-1#:~:text=We%20call%20this%20%E2%80%9COV%2Dcoherent,which%20it%20is%20not%20attending.)
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+[Code](OVCoherentToyModel.ipynb)
 
-![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
 
-### Exploratory Analysis of Attention Head Superposition in Redwood Research's IOI Task
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+**Python** **PyTorch** **TransformerLens** 
 
-![Bike Study](/assets/img/bike_study.jpeg)
+![Logit Contributions to Completion for Each Head output, as a Function of Source Token](/projects/attn_super/head_outputs_condl_dhead_5.png)
+
+![Flipped Hierarchy Schema for Superposition between Two Heads](/projects/attn_super/show_flipped_hierarchy.png)
+
+### Exploratory Analysis of Name Mover Heads in Redwood Research's IOI Task
+[Code](Superposition_toy_data.ipynb)
+
+
+
+**Python** **PyTorch** **TransformerLens** 
+
+
 
 ### Exploratory Study of the role of LayerNorm in transformer models 
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+[Code](LN_Solu.ipynb)
 
-![Bike Study](/assets/img/bike_study.jpeg)
+
+
+**Python** **PyTorch** **TransformerLens** 
 
 ### A Tableau Tutorial for Analyzing iSeaTree Data 
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+[Tutorial](https://treemama.org/how-to-make-maps-and-tree-maps-in-tableau/)
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
-
-![Bike Study](/assets/img/bike_study.jpeg)
+Created a tutorial to create geographic maps, histograms, and Treemaps in **Tableau** to visualize iNaturalist tree data, as part of iSeaTree's outreach efforts to help middle and high school teachers plan lessons around biology and data analysis. 
 
 ### Computing The Exact Optimal Classifier for Ginkgo Jets
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+[Publication](https://ml4physicalsciences.github.io/2022/files/NeurIPS_ML4PS_2022_32.pdf)
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+Used **Python** and **PyTorch** 
 
-![Bike Study](/assets/img/bike_study.jpeg)
+![Jet Discrimination (left) and Optimal Classification via the Neyman-Pearson Lemma (Right)](/projects/Jets/optimal_classifier.png)
 
-## Talks & Lectures
-- Causality: The new science of an old question - GSP Seminar, Fall 2021
-- Guest Lecture: Dimensionality Reduction - Big Data and Machine Learning for Scientific Discovery (PHYS 5336), Spring 2021
-- Guest Lecture: Fourier and Wavelet Transforms - Scientific Computing (PHYS 5315), Fall 2020
-- A Brief Introduction to Optimization - GSP Seminar, Fall 2019
-- Weeks of Welcome Poster Competition - UTD, Fall 2019
-- A Brief Introduction to Networks - GSP Seminar, Spring 2019
-
-- [Data Science YouTube](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
 
 ## Publications
-1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019). DOI: 10.26717/BJSTR.2019.20.003446
-2. Wijeratne, L.O.; Kiv, D.R.; Aker, A.R.; Talebi, S.; Lary, D.J. Using Machine Learning for the Calibration of Airborne Particulate Sensors. Sensors 2020, 20, 99.
-3. Lary, D.J.; Schaefer, D.; Waczak, J.; Aker, A.; Barbosa, A.; Wijeratne, L.O.H.; Talebi, S.; Fernando, B.; Sadler, J.; Lary, T.; Lary, M.D. Autonomous Learning of New Environments with a Robotic Team Employing Hyper-Spectral Remote Sensing, Comprehensive In-Situ Sensing and Machine Learning. Sensors 2021, 21, 2240. https://doi.org/10.3390/s21062240
-4. Zhang, Y.; Wijeratne, L.O.H.; Talebi, S.; Lary, D.J. Machine Learning for Light Sensor Calibration. Sensors 2021, 21, 6259. https://doi.org/10.3390/s21186259
-5. Talebi, S.; Waczak, J.; Fernando, B.; Sridhar, A.; Lary, D.J. Data-Driven EEG Band Discovery with Decision Trees. Preprints 2022, 2022030145 (doi: 10.20944/preprints202203.0145.v1).
-6. Fernando, B.A.; Sridhar, A.; Talebi, S.; Waczak, J.; Lary, D.J. Unsupervised Blink Detection Using Eye Aspect Ratio Values. Preprints 2022, 2022030200 (doi: 10.20944/preprints202203.0200.v1).
-7. Talebi, S. et al. Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales, 29 March 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1499191/v1]
-8. Lary, D.J. et al. (2022). Machine Learning, Big Data, and Spatial Tools: A Combination to Reveal Complex Facts That Impact Environmental Health. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_12
-9. Wijerante, L.O.H. et al. (2022). Advancement in Airborne Particulate Estimation Using Machine Learning. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_13
-
-- [Data Science Blog](https://medium.com/@shawhin)
+1. Greenspan, L., Wynroe, K. {\it An OV-coherent toy model of attention head superposition.} Alignment Forum. 2023.
+2. Cranmer, K., Drnevich, M., Greenspan, L., Macaluso, S., Pappadopulo, D. {\it Computing the Bayes-optimal classifier and exact maximum likelihood estimator with a semi-realistic generative model for jet physics.} Machine Learning and the Physical Sciences workshop, NeurIPS 2022
+3. Greenspan, L. {\it Holography, Application, and String Theory's Changing Nature.} Studies of History and Philosophy of Science 2022, 94 pp. 72-86 [arXiv:2205.05159]
+4. Greenspan, L. {\it The Bootstrap: Building Nature from the Bottom Up.} Inside the Perimeter. 2017 [http://insidetheperimeter.ca/bootstrap-building-nature/]
+5. Costa, MS., Greenspan, L., Penedones, J., Santos, JE.  {\it Polarised Black Holes in ABJM.} J. High Energ. Phys. 2017: 24. [hep-th/1702.04353]
+6. Costa, MS., Greenspan, L., Oliveira, M., Penedones, J., Santos, JE. {\it Polarised Black Holes in AdS.} Class. Quant. Grav 33 2016, 11 pp. 115011 [hep-th/1511.08505]
+7. Costa, MS., Greenspan, L., Penedones, J., Santos, JE.  {\it Thermodynamics of the BMN Matrix Model at Strong Coupling. }J. High Energ. Phys. 2015, 03 pp. 69. [hep-th/1411.5541]
