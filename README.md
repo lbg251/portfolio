@@ -33,9 +33,9 @@ As a doctoral graduate with a background in high energy physics and extensive ex
 
 **Python** **PyTorch** **TransformerLens** 
 
-![Logit Contributions to Completion for Each Head output, as a Function of Source Token](/projects/attn_super/head_outputs_condl_dhead_5.png)
+![Logit Contributions to Completion for Each Head output, as a Function of Source Token](/clean_projects/attn_super/head_outputs_condl_dhead_5.png)
 
-![Flipped Hierarchy Schema for Superposition between Two Heads](/projects/attn_super/show_flipped_hierarchy.png)
+![Flipped Hierarchy Schema for Superposition between Two Heads](/clean_projects/attn_super/show_flipped_hierarchy.png)
 
 ### Exploratory Analysis of Name Mover Heads in Redwood Research's IOI Task
 [Code](Superposition_toy_data.ipynb)
@@ -64,7 +64,7 @@ Created a tutorial to create geographic maps, histograms, and Treemaps in **Tabl
 
 Used **Python** and **PyTorch** 
 
-![Jet Discrimination (left) and Optimal Classification via the Neyman-Pearson Lemma (Right)](/projects/Jets/optimal_classifier.png)
+![Jet Discrimination (left) and Optimal Classification via the Neyman-Pearson Lemma (Right)](/clean_projects/Jets/optimal_classifier.png)
 
 
 ## Publications
