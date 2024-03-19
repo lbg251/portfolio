@@ -71,7 +71,7 @@ In terms of attention head superposition, we came up with two hypotheses for wha
 
 If the dataset and examples are simple enough, we only see one feature grossly represented, but this is really just the tip of the iceberg! This point underscores just how complicated natural language is, and how important it is that the language model's internal representation aligns with our own. 
 
-### Exploratory Study of the role of LayerNorm in transformer models 
+<!-- ### Exploratory Study of the role of LayerNorm in transformer models 
 
 [Code](LN_SolU.ipynb)
 
@@ -79,7 +79,7 @@ In this exploratory project, I used **python**, **PyTorch**, and **TransformerLe
 
 For a residual stream vector, the SoLU function scales and separates components in the neuron (feature) dimension. The subsequent LayerNorm exaggerates this separation by moving the vector components around in an almost linear way. Since the LayerNorm scale is the variance of a token’s feature vector, it will be close to 0 for diffuse vectors and larger for sparse vectors. The hope is that the LayerNorm will retain the monosemantic neurons isolated by the SoLU activation, even as it increases the activations of more diffusely distributed features. 
 
-I analyzed a 1-layer pre-trained model with a hidden dimension of 512. For inference, I used the first 2000 examples of the Pile, which pulls from a representative sampling of language model datasets. Since the LayerNorm effectively gets rid of the Softmax denominator, I wanted to compare these values across input tokens, to see how the neuron activations change. 
+I analyzed a 1-layer pre-trained model with a hidden dimension of 512. For inference, I used the first 800 examples of the Pile, which pulls from a representative sampling of language model datasets. Since the LayerNorm effectively gets rid of the Softmax denominator, I wanted to compare these values across input tokens, to see how the neuron activations change. 
 
 Histograms of 
 
@@ -90,7 +90,7 @@ The first time I ran this model, I used prepend_BOS = True, and saw a very high 
 
 ![Histogram of the SoLU denominator across all tokens](/clean_projects/LayerNorm/SoLU_denominator.png)
 
-**Python** **PyTorch** **TransformerLens** 
+**Python** **PyTorch** **TransformerLens**  -->
 
 ### A Tableau Tutorial for Analyzing iSeaTree Data 
 [Tutorial](https://treemama.org/how-to-make-maps-and-tree-maps-in-tableau/)
