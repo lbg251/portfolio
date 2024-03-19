@@ -27,7 +27,7 @@ As a doctoral graduate with a background in high energy physics and extensive ex
 ### An OV-Coherent Toy Model for Attention Head Superposition
 [Publication](https://www.alignmentforum.org/posts/cqRGZisKbpSjgaJbc/an-ov-coherent-toy-model-of-attention-head-superposition-1#:~:text=We%20call%20this%20%E2%80%9COV%2Dcoherent,which%20it%20is%20not%20attending.)
 
-[Code](OVCoherentToyModel.ipynb)
+[Code](https://github.com/lbg251/portfolio/blob/main/clean_projects/attn_super/OVCoherentToyModel.ipynb)
 
 We present a novel toy model for attention head superposition, which is thought to be an important part of how natural language features are implemented in transformer models. Our setup enforces superposition by requiring a single destination token to attend to multiple source tokens. The information that a head needs to copy from a source token therefore depends on information elsewhere in the context, pushing the model to form interference patterns between heads attending to different tokens. 
 
@@ -47,7 +47,7 @@ Understanding attention superposition contributes to language model interpretabi
 
 
 ### Exploratory Analysis of Name Mover Heads in Redwood Research's IOI Task
-[Code](Superposition_toy_data.ipynb)
+[Code](https://github.com/lbg251/portfolio/blob/main/clean_projects/IOI_analysis/Superposition_toy_data.ipynb)
 
 This project explored name-mover heads in GPT2-small. These attention heads are responsible for copying names in an input prompt of the form "John and Mary went to the pub. John bought a pint of beer for...", and are a vital part of the circuitry found by [Redwood Research to identify the Indirect-Object (IO)](https://arxiv.org/pdf/2211.00593.pdf) of these prompts. We wanted to understand why there were so many heads seemingly responsible for name-moving in this task, and whether that was a signal that they were distributing the name moving feature in superposition. 
 
