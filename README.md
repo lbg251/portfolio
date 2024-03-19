@@ -106,10 +106,10 @@ Accurate Jet classification is an important part of experimental particle physic
 
 
 ## Publications
-1. Greenspan, L., Wynroe, K. {\it An OV-coherent toy model of attention head superposition.} Alignment Forum. 2023.
-2. Cranmer, K., Drnevich, M., Greenspan, L., Macaluso, S., Pappadopulo, D. {\it Computing the Bayes-optimal classifier and exact maximum likelihood estimator with a semi-realistic generative model for jet physics.} Machine Learning and the Physical Sciences workshop, NeurIPS 2022
-3. Greenspan, L. {\it Holography, Application, and String Theory's Changing Nature.} Studies of History and Philosophy of Science 2022, 94 pp. 72-86 [arXiv:2205.05159]
-4. Greenspan, L. {\it The Bootstrap: Building Nature from the Bottom Up.} Inside the Perimeter. 2017 [http://insidetheperimeter.ca/bootstrap-building-nature/]
-5. Costa, MS., Greenspan, L., Penedones, J., Santos, JE.  {\it Polarised Black Holes in ABJM.} J. High Energ. Phys. 2017: 24. [hep-th/1702.04353]
-6. Costa, MS., Greenspan, L., Oliveira, M., Penedones, J., Santos, JE. {\it Polarised Black Holes in AdS.} Class. Quant. Grav 33 2016, 11 pp. 115011 [hep-th/1511.08505]
-7. Costa, MS., Greenspan, L., Penedones, J., Santos, JE.  {\it Thermodynamics of the BMN Matrix Model at Strong Coupling. }J. High Energ. Phys. 2015, 03 pp. 69. [hep-th/1411.5541]
+1. [Greenspan, L., Wynroe, K. An OV-coherent toy model of attention head superposition. Alignment Forum. 2023.](https://www.alignmentforum.org/posts/cqRGZisKbpSjgaJbc/an-ov-coherent-toy-model-of-attention-head-superposition-1#:~:text=We%20call%20this%20%E2%80%9COV%2Dcoherent,which%20it%20is%20not%20attending.)
+2. [Cranmer, K., Drnevich, M., Greenspan, L., Macaluso, S., Pappadopulo, D. Computing the Bayes-optimal classifier and exact maximum likelihood estimator with a semi-realistic generative model for jet physics. Machine Learning and the Physical Sciences workshop, NeurIPS 2022](https://ml4physicalsciences.github.io/2022/files/NeurIPS_ML4PS_2022_32.pdf)
+3. [Greenspan, L. Holography, Application, and String Theory's Changing Nature. Studies of History and Philosophy of Science 2022, 94 pp. 72-86](https://arxiv.org/pdf/2205.05159.pdf)
+4. [Greenspan, L. The Bootstrap: Building Nature from the Bottom Up. Inside the Perimeter. 2017](http://insidetheperimeter.ca/bootstrap-building-nature)
+5. [Costa, MS., Greenspan, L., Penedones, J., Santos, JE. Polarised Black Holes in ABJM. J. High Energ. Phys. 2017: 24.](https://link.springer.com/content/pdf/10.1007/JHEP06(2017)024.pdf)
+6. [Costa, MS., Greenspan, L., Oliveira, M., Penedones, J., Santos, JE. Polarised Black Holes in AdS.Class. Quant. Grav 33 2016, 11 pp. 115011](https://arxiv.org/pdf/1511.08505.pdf)
+7. [Costa, MS., Greenspan, L., Penedones, J., Santos, JE. Thermodynamics of the BMN Matrix Model at Strong Coupling. J. High Energ. Phys. 2015, 03 pp. 69.](https://link.springer.com/content/pdf/10.1007/JHEP03%282015%29069.pdf)
