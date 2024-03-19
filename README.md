@@ -58,11 +58,11 @@ We used the IOI template from above, but replaced the names according to four da
 2. On religious prompts, the model shows a strong preference for the IO unless this name is "Jesus", which is seems to dislike. 
 3. On prompts that contain place names, the model prefers completions that are also places. 
 
-We visualized the logit difference across heads and layers using **TransformerLens**, and found that the name-mover heads identified in the paper have the largest activations consistently across datasets. We also found, unsurprisingly, that the pattern for the noun dataset is very different from the original pattern, while the patterns for the religious and place names are more similar. This suggests that you cannot trick the model into IOI, and that actual name moving is happening. 
-
 ![Logits difference from patching in nouns](/clean_projects/IOI_analysis/nouns_attn.png)
 
-![Logits difference from patching in place names](/clean_projects/IOI_analysis/places_attn.png)
+We visualized the logit difference across heads and layers using **TransformerLens**, and found that the name-mover heads identified in the paper have the largest activations consistently across datasets. We also found, unsurprisingly, that the pattern for the noun dataset (above) is very different from the original pattern, while the patterns for the religious and place names (below) are more similar. This suggests that you cannot trick the model into IOI, and that actual name moving is happening. 
+
+ ![Logits difference from patching in place names](/clean_projects/IOI_analysis/places_attn.png)
 
 In terms of attention head superposition, we came up with two hypotheses for what we were seeing: 
 
