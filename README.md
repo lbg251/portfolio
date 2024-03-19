@@ -75,25 +75,18 @@ If the dataset and examples are simple enough, we only see one feature grossly r
 
 [Code](LN_SolU.ipynb)
 
-which asks about the distribution of the LayerNorm scale and softmax denominator in SoLU models.
- “just re-normalizes a vector” is unsatisfying, since none of the non-linearities in these models are particularly complicated, and LayerNorm seems to have a large effect on training and optimization. Reproducing Conjecture’s work “Re-examining LayerNorm” made it clear that the consequences of LayerNorm are much less trivial than “just re-normalizing”, that it can be used in place of an activation function in at least some cases, and that it could have real semantic impact in transformer models. 
+In this exploratory project, I used **python**, **PyTorch**, and **TransformerLens** to study the distribution of the LayerNorm scale an softmax denominator in transformer models with a SoLU activation function. In addition to have a large effect on training and optimization, LayerNorm is a non-linear function that could impact the representation of natural language features. [SoLU models](https://transformer-circuits.pub/2022/solu/index.html) claim to make neurons more monosemantic (firing on fewer dissimilar features), and therefore more interpretable. I wanted to understand how LayerNorm impacted this interpretability. 
 
-The presence of LayerNorm after the SoLU activation function makes this more concrete, and much more interesting. Apart from improving model performance, does this LayerNorm successfully prevent SoLU from hiding non-basis aligned features that are still present? How would this depend on input data? Should the LayerNorm after a non-linear activation like SoLU, which privileges the basis, be treated differently from LayerNorms that follow linear operations (and, in what circumstances can these be seen as another non-linear activation in the model)? 
+For a residual stream vector, the SoLU function scales and separates components in the neuron (feature) dimension. The subsequent LayerNorm exaggerates this separation by moving the vector components around in an almost linear way. Since the LayerNorm scale is the variance of a token’s feature vector, it will be close to 0 for diffuse vectors and larger for sparse vectors. The hope is that the LayerNorm will retain the monosemantic neurons isolated by the SoLU activation, even as it increases the activations of more diffusely distributed features. 
 
- For inference, I used the Microsoft Research Paraphrase Dataset from HuggingFace, since it seemed reasonably sized, with 3668 examples in its training set, and not too limited in its topics that it would skew the analysis too much. 
+I analyzed a 1-layer pre-trained model with a hidden dimension of 512. For inference, I used the first 2000 examples of the Pile, which pulls from a representative sampling of language model datasets. Since the LayerNorm effectively gets rid of the Softmax denominator, I wanted to compare these values across input tokens, to see how the neuron activations change. 
 
-Key Experiments/ Takeaways: 
-For a single prompt token, plotting the residual stream vector gives a good idea for what each piece of the SoLU + LayerNorm is doing to each direction in feature space (see figure 1). The SoLU numerator scales and separates components, and the denominator exaggerates this separation. The LayerNorm is almost linear on its input, but moves the points around on this line (like the stretching/folding behavior in Conjecture’s post. This same shifting can be seen in other LayerNorm layers of this network.). To do: color code the points by their position in the initial vector, so I can see exactly how they move around. It would also be good to look at these plots for different inputs, since SoLU should treat diffuse and sparse activations differently.  
-
-Since the LayerNorm effectively gets rid of the Softmax denominator, it makes sense to compare this denominator with the LayerNorm scale. The hope is that the LayerNorm will retain the monosemantic neurons isolated by the SoLU activation, even as it increases the activations of more diffusely distributed features. 
-
- Since the LayerNorm scale is the variance of a token’s feature vector (or the norm for “centered” models), it will be close to 0 for diffuse vectors and larger for sparse vectors. So, I think I’m convinced that looking at these values across tokens will tell us something about which are most activated by a single neuron (or at least fewer neurons). 
- 
-Dividing by this denominator definitely exaggerates the polarizing effect of SoLU activations.
+Histograms of 
 
  If I instead plot a histogram of values across all tokens for all example prompts (figure 3), the distribution looks much less noisy, and there do seem to be outlier bars that come from many examples. 
 
 The first time I ran this model, I used prepend_BOS = True, and saw a very high bar to the right of the histograms for both the LayerNorm scale and the SoLU denominator. Thinking this might be the culprit, I set prepend_BOS=False and the bar disappeared. This probably means that some tokens are embedded in the same direction every time they appear in the model, regardless of position in the prompt! In hindsight, I think I should have expected this, but I don’t think this should be true for all tokens, since the interpretation (feature representation?) of many tokens should depend on context. It would be interesting to do a per-token analysis here to figure this out. 
+![Histogram of the LayerNorm Scale Factor across all tokens](/clean_projects/LayerNorm/layernorm_scale.png)
 
 ![Histogram of the SoLU denominator across all tokens](/clean_projects/LayerNorm/SoLU_denominator.png)
 
@@ -107,9 +100,9 @@ Created a tutorial to create geographic maps, histograms, and Treemaps in **Tabl
 ### Computing The Exact Optimal Classifier for Ginkgo Jets
 [Publication](https://ml4physicalsciences.github.io/2022/files/NeurIPS_ML4PS_2022_32.pdf)
 
-Used **Python** and **PyTorch** 
-As a community we have performed a number of comparisons of different architectures for jet tagging and other tasks. We’ve even seen that combining multiple classifiers together into a meta-tagger that had slightly better performance. But where does it end? What is the performance of the optimal tagger? Formally, the optimal classifier is defined by a likelihood ratio (Neyman-Pearson lemma), but the likelihood for the observed jet is typically intractable as it involves marginalizing over the enormous number of showering histories and the likelihood for a particular shower is also inconvenient to work with. We consider new datasets with signal and background generated with the Ginkgo model and we use the cluster trellis to exactly compute the marginal likelihood under each hypothesis in order to calculate the exact optimal likelihood ratio. We can use these results to compare the performance of ML-based taggers to this optimal classifier.
-![Jet Discrimination (left) and Optimal Classification via the Neyman-Pearson Lemma (Right)](/clean_projects/Jets/optimal_classifier.png)
+Accurate Jet classification is an important part of experimental particle physics, and some effort has been put into understanding the best architectures and ML for this task. Formally, the optimal classifier is defined by a likelihood ratio (Neyman-Pearson lemma), but the likelihood for the observed jet is typically intractable as it involves marginalizing over the enormous number of showering histories and the likelihood for a particular shower is also inconvenient to work with. We consider new datasets with signal and background generated with the Ginkgo model and we use the cluster trellis to exactly compute the marginal likelihood under each hypothesis in order to calculate the exact optimal likelihood ratio. We can use these results to compare the performance of ML-based taggers to this optimal classifier.
+
+![Jet Discrimination (left) and ROC curves including the Optimal Classification via the Neyman-Pearson Lemma (Right)](/clean_projects/Jets/optimal_classifier.png)
 
 
 ## Publications
